@@ -1,0 +1,46 @@
+# The simple calcultor with basic Arithmatic operation with user chaoise operation and displays output 
+
+def calculator():
+    try:
+        # Getting two values from user in integer datatype
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+
+        # choose an option for perfoming prticular operation
+        print("Choose an operation:")
+        print("1. Addition +")
+        print("2. Subtraction -")
+        print("3. Multiplication *")
+        print("4. Division /")
+        operation = input("Enter the number corresponding to the operation 1/2/3/4: ")
+
+        # Perform the calculation based on user choice
+        if operation == '1':
+            result = num1 + num2
+            operation_str = '+'
+        elif operation == '2':
+            result = num1 - num2
+            operation_str = '-'
+        elif operation == '3':
+            result = num1 * num2
+            operation_str = '*'
+        elif operation == '4':
+            if num2 == 0:
+                raise ZeroDivisionError("Cannot divide by zero.")
+            result = num1 / num2
+            operation_str = '/'
+        else:
+            raise ValueError("Invalid operation choice. Please enter a number between 1 and 4.")
+
+        # Display the result
+        print(f"The result of {num1} {operation_str} {num2} is: {result}")
+
+    except ValueError as x:
+        print(f"Value Error: {x}")
+    except ZeroDivisionError as y:
+        print(f"Zero Division Error: {y}")
+    except Exception as z:
+        print(f"An unexpected error occurred: {z}")
+
+
+calculator()
