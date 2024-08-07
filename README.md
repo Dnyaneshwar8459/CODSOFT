@@ -1,0 +1,1 @@
+"This simple calculator program allows users to perform basic arithmetic operations (addition, subtraction, multiplication, and division) on two numbers. Users input the numbers and select the desired operation, and the program calculates and displays the result."
